@@ -4,6 +4,16 @@
 @import "flexslider";
 @import "flaticon";
 
+/** Placeholders **/
+// в плейсхолдерах нельзя использовать переменные и работает в пределах одного файла
+%box-sizing{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'Novecentosanswide-DemiBold';
         src: url('../fonts/NovecentowideDemiBold.eot');
@@ -11,6 +21,12 @@
              url('../fonts/NovecentowideDemiBold.woff2') format('woff2'),
              url('../fonts/NovecentowideDemiBold.woff') format('woff'),
              url('../fonts/NovecentowideDemiBold.ttf') format('truetype');}
+
+
+// Вставка плейсхолдера
+*, *:after, *:before{
+    @extend %box-sizing;
+}
 
 body {
     margin: 0;
